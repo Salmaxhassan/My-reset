@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#561331" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="My Reset" />
+  <meta name="description" content="Your private, 60-day habit reset. Faith, hair, health and home." />
+  <meta name="color-scheme" content="light" />
+  <link rel="apple-touch-icon" href="data:image/png;base64,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" />
+  <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAU7klEQVR4nO2dZ1hUx/rAZ2FhG1UQQSyIgooIKs0GYgVLlETFFsk1tmjsGk3i/ZtojCbq1STG2K4aWzSW2JIgRg0CiRFsNJEiIr3Xha2w/w/4EO6eOdvmAGfzvL9P+J49777u/vbs7MyZGU643WAEAIZi0tEFAMYNCAQQAQIBRIBAABEgEEAECAQQAQIBRIBAABEgEEAECAQQAQIBRIBAABEgEEAECAQQAQIBRIBAABEgEEAECAQQAQIBRIBAABEgEEAECAQQAQIBRIBAABEgEEAECAQQAQIBRIBAABEgEEAECAQQAQIBRIBAABEgEEAECAQQAQIBRIBAABEgEEAECAQQAQIBRIBAABEgEEAECAQQAQIBRIBAABEgEEAECAQQAQIBRIBAABEgEEAECAQQAQIBRIBAABEgEEAECAQQAQIBRIBAABEgEEAECAQQAQIBRIBAABHcji6AGcz5PHc/z95DPJxcu3Xp1c3a3pYn5PNFgqYmlVwilUvlDbXiquLyquLyyqKywqzcgoyc4uw8pULZplUJLIQDAn3cfT2d+7o49OgqtBLxRQKFTCERN9SUVhZk5rxKzUqKji/Ozm/TMtoUTrjd4I6uwXC4ZtwhE0YEzgzpN9Sba26m17lNjY0FGa8yHqZkJCRnPkytKi5nsLA+QzxCF8/wHjOUa6b9I1r0Iu/2yatxl2/JJTIGa2gfjFUgrhl3zPypk5fNtrKzIc8ma5C+5zmVPA9CyKFH1/nbVngG+ep7Ym1F9fnPD9+/eoeRMtoNoxTIM9An4rNVnXs4MZWQKYFGzZ4075PlZjxzgzMkRccfXvNFQ62YvJj2wcjaQKZc7vQNC0IXz+BwOGqHyvNLkqLj0x8kFb3Iqywuk9VLOCYmQiuLTk6dXQa6DRzl5z3a38TUtI0K43A4c7csG/dOGPVQXWVN3KVbKbGP8p9n19eIzQU8u64Obr4Dhr85rs8QD7UHewX7b7m6f++CzaWvCtuoVGYxpiuQuYC38uAn1G+H7MT0a1+fSr73UKVSaTjdpovdrI8WD506hnqI/AoU8dnK0fPeUAuqVKqbRy9d++a0rEGKPct7dEDE9lWdnDqrxSsKS3eGr6soLCUpqX0wGoH4IsH6kzvVPrJKhfL89kN3z9zQrE5rRs4IefeLdRyT/7mAEQoUtnr+tNXz1YKNSuWhVTsf3ozVfK6NQ6e1xz/v4dFbLV6SU7B12gpJXb3BVbUPxtEPZGJqsmz/v9XskYgbvpyz4c7p67rbgxCKuxR1fsdhBmvzDPKduuptavz4pr1a7UEIVZdW7l2wuaKgRC3excV54a71zJTYlhiHQLM/XuoV7Nc6olQo973776zHzwzI9tuJKy+epDFSmMjGcsneTdQGWdylqD+v3NYxSU1Z5eG1X6qa1D8GPiEjR82exECVbYkRCOQV7Dd+wZtqwQs7j2Q+TDEsoUqlunXiJ+K6EEJo5saFlp2s1YL1NeJz2/W7yGU+TIm9eJMan/HBuxa2VobX1/awXSChlcWCnevUglmPn90+eY0k7eNbf5J3Q/cc0CcofCI1HnnkggG/w699c0YpV6gFLWytwtZEGFhfu8B2gcLWRNh0sVMLnv/8sF7tHipKuSIv7QVJBoTQGyvmqjXGEUIKmTz6h58NyFZZVIZtM42aNdHGoZMh9bULrO4Hsu/WZfS8KWrB9AdJjLRgtoWtJDndqXf3IRNGUOMPI2PrawzsBow+9yu1l4FrbhaycPqPO48alrOtYfUVaNqqt6ljSXdOX++QYtQYPXcKte2MEEr4NcbgnBkJybXlVdR44MxQXcbUOgT2CmRha039OMoaJIl3H3RIPa0xMTUdOg3TISmXylLjHhucVtWkenrnL2pcZGM5aOwwg9O2KewVKGhWKHWAPSk6QS7t+CFrz0Af6o8vhNCLJ2mE5T378yk2jvWVDbBYoPBQajDt/tN2LwSD95gAbDwjwcCehVYZkrFxz8Ahplw2fouxVCBnd5cuLs7UePqDpPYvhopnkA82npOcQZi5qrgc2wziCQXufgMIk7cFLBVoyPjh1KBcIivKzmv/YtSw6+rg0KMr9lB++kvy/HRJ+g9j46glSwXyGu1PDeY9z6b297c/vbz7YuOyBmlFAQPj5/npOdi4y0A38uSMw0aBuOZmLgPdqXGW3CLTC1cbQqg8v5iwe7MlDzaOfU06HDYK5OLphu32KMvDv7LtTLd+rtg4U+XR5bHsZE3tlO9w2Niwdx3UDxuvLCqjBjkcTk9Pt34BXr28+3bp6WzrZM8XCrjmZgqZXCaRVhWVlxcUv0rNevHkeUZ8EiPTMLq44BtAVcWY8gwA+99sxqGHU3VJBSPPwhRsFKhrnx7YuLiqpvU/LWytxkZMG/HW+M7dHakP5gn5PCHfys6mp2cfn5CRCCGJuOHp7fu3T17NTkw3uDYTUxP7bl2wh2orarBxfamrpM3j0LMreU8Bs7BRIEfX7ti4uKq2+Q+uGXfy8jkTF8/gCQW6pxVYCIeFjR0WNjbt/tMfth007BeTbRd7uv4YDW+8XtRVVNMdsnfGu9uBsLEN5NgL0wOEEGqoq0cIObu7bP3lUNjq+XrZ05r+wwZt/fngtFVvU8fStYLtgH5dXk2dYfWooVQo6e6htmRiDhOzsO4KZMrlWtnbYg8p5YrB44cv3bdJTZ36GnH8z9GpcY8LMnKqSsoVMrk5n9epq0OP/r29gv18Qkea83lqqUxMTcLWRPQe3P/b5dv0ms5nQS+QlOZdNwCZRMoT8jHPzr6by1gnkKWdNXaUGyE0eNyw6RsWtJ6ao5Qrru8/G3X8spoE0npJYearwsxXf12/a/HZobfWRQTjBs8HjvL74PSXeyI+pPvEU7GwoX0LZfUSHZNoRVYvQbiLDQsFYt1XmIbviJmbFrW2p7qkYtubK28c+EHzJURcVXPq//bvX/opdpizzxCPpV99pPt3GV+EuTA0w+AoL10qvqHf2m0H+wSypRWoNfXVdV/M2ZCXlq1j2ie37+9/b2tTYxP10OBxwyYtnaVjHlMz2hn4TU2Y5IaBrRMhpO/8/3aAdQKZ8XWaF/z9x1+V5BTolTkl5uH1b89iD725NsLZ3UWXJBpu7GpSNupVjwYaG/GpWHhbGfsEMtcu0LM/Husy5YpK5OEL1BlYCCFTLjf8w0W6ZDDl0k6ObocrkCkIpBVdrtLndxwxLLlcKru46xj2kFewvy6DTY30lxkTE8ZeTBNTfKrGNl7QyABYJ5CGj3gzec+zdW/6UHl0M47upvex87XPbtYwGEL3rhuAKc0iEG29IpYBsE4gDR/xZv66/jtJfqVC+SgqDnvIb1Kg1kZGo0J96lYLDC79QecideJYh8M6gbS+RuQ31T+6iReIJxT0G+qt+VwNPUbU7kqDoUslkzDWV8kUrBNIIZdrOKpUKItekN6U+Co1i+5Q3wAvzeeKq2nHK3gixjpp6FK1jAayB9YJJBU3aDhalJXbRPMTV3dqyirpBj61tqM1jJjycYMPhsET4FOp3Y/ABlgnkOYxbfLLTzN0t4069cbfCNCChqFyoZUFQUV/Y8rlYgfCEHN3jDAI6wTS/Bo1MLTgEp0Htl3sNA9rVJWUNyrxP4U0DMLohZW9Dd0hurtdOxDWCVRfXauhHS0VMyOQtB7/RWliaiqy1jRg2dTYRHfnvIY3Xi80iFiWW8TIUzAI6wRSqVSl9C+TlKERbwl9S4sn0PJjim4IxdZRfalDw6AumdiChlemo2CdQIj+HUIIMTLtASGkYQBfa1c4XTcm9s5aA7Dvhs8jrqphdjV0RmCjQIWZr+gO8UVCRp7CnP4yo5Bp6kdACL2kmX5Kd6+0vtCJmJOcyUh+ZmGjQNmJz+kO8RnqaxFY0IqotbPuZRJeIJ5QYMfEPct09wXQPW/HwkaBXjyhF4j+jdcLuiuZUq5o0LY8VEVBSWkufopjt74uhIUhhLr364WNp91/Qp6ccdgoUE1ZJV1/D1PtDLq708sLSnRpZqXEPMLG6Sat6o6toz32lnBZgyTzYSph8raAjQIhhBJ/xw94Obv1ZCQ/3aUi/7lOc33oxuPc/DwNLqkZd5oMqXFPWDgUj1gr0NPb97FxgaVIw69cHbHu3Imur0XH1RdT4x5je8z7DPYg2WkFIdRv6CBsnLW7+LBUoIyEFLpOs96D+xMm7zlAfV+BFlJi8d9NajQqlX9du0uNmwt4HiMMX4SFw+EMHjeUGq+vrnt6B/+J6nBYKpBKpYq5gFl4GyHkOzGQMLlPKD5D8ct83aerRp/7Bdta8psUZHBhbr4DrDtjVvSNvRTFzu8vxFqBEELR536VNWD6nb1HB2joxdGKKZfbPFWeyr1zv+qepzAr9/GtP6lxv0lBBo+qBs+ZTA0q5YqoY5cNS9gOsFcgcVXN7VOY5eh5Qv6It8YbnNYndITIGvMGS+rq7/0YqVeqG9+epV6EzPm84LkYD7Ri62iPvXrFXLjJthU5WsNegRBCkYcvYNuqYWsiDOtRNOOZz/hgIfbQtW/O6Lu30qvUrBicc5OWhAssRfrWNnXFPOooSn113ZV9J/VN1Z6wWqD6GvHZrQeocSs7m2m4HZa0MnHJTGxPUl5atmGbb1zafZyquMjGcvbmpXrl6TPEA7sxz8Vdx1h4F2JrWC0QQujBjej4n+9R4yGLZviEYHYa0IDHiCFY7WQN0u9Wbqe7y0cz4qrao+t3Ub/IgsJDsVsjYrGys1my70PqfUiPouLundejWdYhsF0ghNCxTXtyn6lvjMLhcN77ZrP/5FE6JvEeE7D6yFbqxImmxsbvVmwn2bk9+V7C9f2YCa8Ld2/QRXEre9t1J3ZQr4slOQXHNv7H4KraDePY8tLW0X7jmV2Ort2oh2J+jLy850Qt/Z2mFrZWYavnj5k/lbo6h1KhPLruy/hfMFc4fXln+2pq21nVpIo8cuHa/jN0d494Bfu98/kaatdoZVHZjvB12Em0bMM4BEIIWdnbrv9+B3VvUYSQQiZ/GBmb+PuD3GcvKovK5FKZOZ/fycm+h0dvr2B/39BA7M/++uq6A+9vS7ufyEh5HA5n3ifLx0ZMox6qLa96vWtz+sv6GjFPwOvk1NnNz3P4m+PcfDBrh5fkFOx799/6zvzvKIxGIISQGc987pblwXMY2AUyNe7xsY17GL8/K3jOpLlbiPaNT76XcHjNToM3jGp/jEmgZvoPGzR781LspUgXirPzL+0+Tjc5lRyHnl3nb1vpGYjfC0EDdZU1P+448sdPv7VFVW2H8QmEEOKYcLxHB4yeN8Uz0FfHGelyiSw5JiHmx0it28szgpuvZ8jC6YPGBuiyQ0pxdv7tU9diL97Ua7E9lmCUArUgsBR5DB/k7jfQ0bW7Yy9nkbUlTyQwMTFRyOTS+oaqkory/OLcZy9eJqanxydrvVeV+fIshANH+bn5DnB27+XQ00loKeIJBUq5QlrfUF1aWZD5Kjc1Kyk6vjArt50LYxDjFgjocIygHwhgMyAQQAQIBBABAgFEgEAAESAQQAQIBBABAgFEgEAAESAQQAQIBBABAgFEgEAAESAQQATrtg/SQPCMKbPXL1U1qT4KW1Bd9vdkTc/hviv+8wlCaO/7H2c8Tn5/zxaXAe5b5ywXV/89o8rFw33j0d03jp6N/P4CNm3z30qFsrK4ND4qOvLkxZaJPq0f0IJMIl09ZubrAob5THh7ulOvHmbmZsW5BY/uxP5x/beGOrGGczdOnv/13Yt0/9PC7Nxt897X+YXpSIxJoGYUcrnf+KDffrjSEvGfMEoulbXsL3H2ywOf/HBg9rql/92yuznCNeNGbF5dkJUTdZp2kvmns5cVv8oXWIj8xgfN+WAZ19z86sGT1AdQTxw+ZXzE5lW/nb1yYuvehjqxx9Ahs9Yuse1sf+Gro5rPfW/YGy1/7/rl9MuU9IObtuv6KrAG4/sKS4p94B8S3PJPcz7PO2hoYuzfKz5Vl1Vc3n/cd3yQV2BAc2Tiv2Y59nQ+tf1rrdskSMT1MVcinyckjnproo71jJsTlpOWefnb41Wl5TKJ9Mnvf+7415qiHGZW1Gc/xidQ/K173d1dHV1e70kwKGgoQigx5q/Wj4m7fist4em8jcuFFiLn3i6hETNunrqUl6nrLmPlhcUCC5HIylKXBwstRbXlla0jtZXVsVfxa9P88zA+gfIysotz8vwnvJ6T6jdhVGLsA+rSqmd27ueLhOHrlkRsXlWSW/jrifO6P0Xnbk4KmVyi26r4L1PS+/kNchtEuridkWJ8bSCEUPyte8Mnj7t+5IyFjZVHwOBDH+6gPqaiqPTKdydnr1/a1NS0a/EHOi7QJLAQ+YeM6ufrfevsT2p7oH56/mDrfyb/kXBgwzaE0IWvji6yt11/cGdJbkF2yvPMJymJsQ/qa+p0OfcfgLEKNHXJ266e/br3dZWIG549eOIRgJkacO/yL28snvsyNSPnmfYVllu/xzFXIq989736A2ga0VWl5buXbOzu7trfb1DP/m7ha5fMWL3o+237klo1y+jO/QdglAKVFxS/TEn3Dwnu3tf10d04uoU1VCpVo7JRx41qm99jS1vrKYvmjnhjwqO7cekPk3QvKS8jOy8jGyFkaWO9Zv/2BVvWfjRtgRS3wto/DONrAzXzICo6IDTY1bNffFQ0g2nrqmrO7zlUkPUy4uPVXDPt+0djMlTX/HHjlsBC5NSrB4OFsRZjFejR7ViegF9VUpadTLusvWGoVKqrh07ZOTmMnBaiy+PDlkWoTT+1tu+EENKxDW7sGOVXGEKorrpm+ciwNkqeFv80O+V5yPzpcdduam19D504ZsAwn+uHz2Q8TjbjmXuN9B8TPjUt/uk/tdGjhrEK1Nb8/N9zq77aOnzK+Jgrr1dBVPslhRDaOCWitqJq34rNI6eGhL0XYe/saGJiUlZQFHXm8q0z/9PlTXdu29XfbsDUZoAIY20DASwBBAKIAIEAIkAggAgQCCACBAKIAIEAIkAggAgQCCACBAKIAIEAIkAggAgQCCACBAKIAIEAIkAggAgQCCACBAKIAIEAIkAggAgQCCACBAKIAIEAIkAggAgQCCACBAKIAIEAIkAggAgQCCACBAKIAIEAIkAggAgQCCACBAKIAIEAIkAggAgQCCACBAKIAIEAIkAggIj/B/UgblAqiXcUAAAAAElFTkSuQmCC" />
+  <title>My Reset — Monthly Progress</title>
+  <style>
+    :root { color-scheme: light; --plum: #561331; --plumDark:#3a0e22; --cream:#f5f1eb; --ink:#191516; --muted:#756d71; --line:#e5dedb; --white:#fffcfa; --pale:#f1e3e8; --green:#356f56; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--cream); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-size:15px; -webkit-font-smoothing:antialiased; }
+    button, input, textarea { font:inherit; }
+    button { cursor:pointer; -webkit-tap-highlight-color:transparent; }
+    button:focus-visible, input:focus-visible, textarea:focus-visible { outline:3px solid #a96686; outline-offset:2px; }
+    .app { max-width:540px; min-height:100dvh; margin:0 auto; padding-bottom:calc(100px + env(safe-area-inset-bottom)); box-shadow:0 0 70px rgba(59,24,43,.045); }
+    .top { padding:calc(26px + env(safe-area-inset-top)) 23px 25px; background:var(--plum); color:#fff; border-radius:0 0 25px 25px; }
+    .brandrow { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .brand { font-weight:750; letter-spacing:.23em; font-size:11px; color:#e8d8df; }
+    .dayspill { font-size:11px; letter-spacing:.055em; border:1px solid #ffffff44; padding:8px 12px; border-radius:999px; color:#f4e8ed; }
+    .top h1 { margin:26px 0 5px; font:normal 38px/1.08 Georgia,"Times New Roman",serif; letter-spacing:-.03em; }
+    .subtitle { margin:0; color:#e9d7df; line-height:1.5; font-size:12.5px; }
+    .content { padding:21px 18px 0; }
+    .eyebrow { text-transform:uppercase; font-size:10px; font-weight:750; letter-spacing:.145em; color:var(--muted); }
+    .datebar { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:0 2px 18px; }
+    .datebar .date { font-family:Georgia,serif; font-size:21px; line-height:1.2; }
+    .datebar small { color:var(--muted); font-size:11px; display:block; margin-top:4px; }
+    .navarrows { display:flex; gap:8px; align-items:center; }
+    .circlebtn { border:1px solid var(--line); width:39px; height:39px; display:grid; place-items:center; border-radius:50%; background:var(--white); color:var(--ink); font-size:20px; }
+    .circlebtn:disabled { opacity:.3; cursor:default; }
+    .progress-card { background:var(--white); border:1px solid var(--line); border-radius:21px; padding:20px; margin:0 0 16px; }
+    .progress-main { display:flex; align-items:center; gap:17px; }
+    .ring { --percentage:0; width:120px; height:120px; flex:0 0 120px; border-radius:50%; background:conic-gradient(var(--plum) calc(var(--percentage)*1%),#e9dfe3 0); display:grid; place-items:center; }
+    .ring-inner { width:96px; height:96px; background:var(--white); border-radius:50%; display:flex; flex-direction:column; justify-content:center; align-items:center; }
+    .ring-inner strong { font:normal 34px Georgia,serif; line-height:1; letter-spacing:-.04em; }
+    .ring-inner span { text-transform:uppercase; font-size:9px; letter-spacing:.13em; margin-top:5px; color:var(--muted); }
+    .progress-copy { min-width:0; flex:1; }
+    .progress-copy h2 { font:normal 23px Georgia,serif; margin:5px 0 7px; }
+    .progress-copy p { font-size:12px; color:var(--muted); line-height:1.5; margin:0; }
+    .subbars { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-top:19px; padding-top:17px; border-top:1px solid var(--line); }
+    .subbar .name { display:flex; justify-content:space-between; align-items:center; gap:4px; font-size:10px; color:var(--muted); margin-bottom:8px; }
+    .subbar strong { font-size:11px; color:var(--ink); }
+    .bar { height:5px; border-radius:20px; overflow:hidden; background:#e9e1e4; }
+    .fill { height:100%; width:0; background:var(--plum); border-radius:20px; transition:width .25s ease; }
+    .focus-card { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:6px; padding:13px 10px; margin:-3px 0 16px; background:#efe8e5; border-radius:14px; }
+    .focus-item { text-align:center; border-right:1px solid #dbced2; padding:4px 0; }
+    .focus-item:last-child { border:0; }
+    .focus-item strong { display:block; color:var(--plum); font-size:16px; line-height:1.3; }
+    .focus-item small { text-transform:uppercase; color:#746a6e; font-weight:750; font-size:9px; letter-spacing:.06em; }
+    .section { background:var(--white); border:1px solid var(--line); border-radius:20px; padding:17px 16px 8px; margin-top:13px; }
+    .sect-head { display:flex; align-items:center; justify-content:space-between; padding:0 2px 11px; border-bottom:1px solid var(--line); }
+    .sect-left { display:flex; align-items:center; gap:10px; }
+    .sect-icon { width:35px; height:35px; border-radius:12px; background:#f1e4e9; display:grid; place-items:center; color:var(--plum); font-size:20px; }
+    .sect-head h3 { font:normal 22px Georgia,serif; margin:0; }
+    .sect-count { font-weight:720; font-size:12px; color:var(--plum); }
+    .task { display:flex; align-items:center; min-height:55px; padding:11px 1px; gap:12px; border-bottom:1px solid #eee9e5; }
+    .task:last-child { border-bottom:none; }
+    .task-action { display:flex; align-items:center; flex:1; gap:12px; min-width:0; cursor:pointer; }
+    .check { width:23px; height:23px; flex:0 0 23px; border:1.6px solid #b4a5ac; border-radius:7px; display:grid; place-items:center; background:#fff; transition:all .15s ease; }
+    .task.done .check { background:var(--plum); border-color:var(--plum); color:#fff; }
+    .task.done .check::before { content:'✓'; font-size:15px; font-weight:900; }
+    .task-label { font-size:13px; font-weight:620; line-height:1.36; }
+    .task.done .task-label { color:#72686c; text-decoration:line-through; text-decoration-color:#b5a1ab; }
+    .task-note { font-size:11px; font-weight:400; color:var(--muted); margin-top:3px; line-height:1.3; }
+    .special { color:var(--plum); font-size:10px; background:var(--pale); padding:5px 7px; border-radius:12px; white-space:nowrap; font-weight:700; }
+    .kcal-box { padding:15px 0 16px; border-bottom:1px solid #eee9e5; }
+    .kcal-header { display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:7px; }
+    .kcal-header strong { font-size:13px; }
+    .kcal-header .pct { font-size:12px; color:var(--plum); font-weight:800; }
+    .kcal-line { display:flex; align-items:center; gap:8px; justify-content:space-between; margin-bottom:10px; }
+    .kcal-line input { background:#faf7f5; border:1px solid var(--line); border-radius:10px; width:106px; height:42px; text-align:center; font-size:16px; font-weight:750; color:var(--ink); }
+    .kcal-line small { color:var(--muted); font-size:11px; line-height:1.4; flex:1; }
+    .kcal-note { font-size:10px; color:var(--muted); line-height:1.45; margin:8px 0 0; }
+    .miniheading { font-size:10px; text-transform:uppercase; color:var(--muted); letter-spacing:.13em; font-weight:800; padding:14px 0 5px; }
+    .prayer-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:7px; padding:7px 0 11px; }
+    .prayer { border:1px solid var(--line); background:#faf7f5; border-radius:11px; padding:10px 1px 8px; text-align:center; color:var(--ink); }
+    .prayer.checked { background:var(--plum); color:#fff; border-color:var(--plum); }
+    .prayer .prayer-mark { display:block; font-size:14px; height:18px; margin-bottom:6px; }
+    .prayer .prayer-name { font-size:10px; font-weight:690; }
+    .rowbtn { border:0; background:none; color:var(--plum); font-size:11px; font-weight:750; padding:7px; }
+    .journal { margin:8px 0 13px; }
+    .journal textarea { width:100%; border:1px solid var(--line); background:#faf7f5; border-radius:11px; padding:12px; min-height:92px; resize:vertical; font-size:13px; color:var(--ink); line-height:1.45; }
+    .notice { padding:13px 15px; border-radius:13px; border:1px solid #eadbdc; color:#6c4e59; background:#f7eeed; font-size:11px; line-height:1.6; margin-top:16px; }
+    .footnote { margin:15px 7px; font:italic 14px Georgia,serif; text-align:center; color:#806976; }
+    .tabs { position:fixed; bottom:0; width:min(100%,540px); left:50%; transform:translateX(-50%); padding:8px 14px calc(10px + env(safe-area-inset-bottom)); display:grid; grid-template-columns:repeat(3,1fr); background:rgba(255,252,250,.98); border-top:1px solid var(--line); z-index:50; }
+    .tab { background:none; border:none; color:#82777b; padding:7px 0; font-size:10px; font-weight:700; display:flex; flex-direction:column; align-items:center; gap:4px; }
+    .tab.active { color:var(--plum); }
+    .tab-icon { font-size:20px; line-height:24px; }
+    .view-title { font:normal 28px Georgia,serif; margin:2px 2px 8px; }
+    .view-desc { color:var(--muted); line-height:1.55; font-size:12px; margin:0 2px 20px; }
+    .calendar { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:7px; margin-top:12px; }
+    .weekday { text-align:center; color:#877b7e; font-size:9px; font-weight:750; padding:2px 0 4px; }
+    .daycell { border:1px solid var(--line); border-radius:12px; min-height:55px; background:var(--white); padding:7px 2px 5px; display:flex; flex-direction:column; align-items:center; justify-content:space-between; gap:5px; }
+    .daycell.out { visibility:hidden; pointer-events:none; }
+    .daycell.selected { border:2px solid var(--plum); padding-top:6px; }
+    .daycell .dn { font-size:12px; font-weight:700; }
+    .daycell .mini { font-size:9px; color:var(--plum); font-weight:700; }
+    .daycell .dot { height:5px; width:60%; background:#eee5e8; border-radius:10px; overflow:hidden; }
+    .daycell .dot b { display:block; height:100%; background:var(--plum); }
+    .month { margin:22px 2px 8px; font:normal 20px Georgia,serif; }
+    .month-panel { background:var(--white);border:1px solid var(--line);border-radius:20px;padding:20px 16px 18px;margin:18px 0; }
+    .month-top {display:flex;align-items:center;justify-content:space-between;gap:12px;}
+    .month-top .month {margin:4px 0 0;font-size:25px;}
+    .month-average {min-width:82px;text-align:right;}
+    .month-average strong {display:block;color:var(--plum);font:normal 31px/1 Georgia,serif;}
+    .month-average span {display:block;color:var(--muted);font-size:10px;letter-spacing:.07em;text-transform:uppercase;margin-top:4px;}
+    .month-bar {margin:16px 0;}
+    .month-metrics {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:13px 0;gap:8px;}
+    .month-metrics div {min-width:0;text-align:center;}
+    .month-metrics strong {display:block;font-size:15px;color:var(--plum);}
+    .month-metrics small {font-size:10px;color:var(--muted);font-weight:400;}
+    .month-metrics span {display:block;font-size:9px;color:var(--muted);margin-top:5px;line-height:1.3;}
+    .stats { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+    .stat { background:var(--white); border:1px solid var(--line); padding:19px 15px; border-radius:17px; }
+    .stat strong { display:block; font:normal 28px Georgia,serif; }
+    .stat span { color:var(--muted); font-size:11px; display:block; margin-top:6px; line-height:1.35; }
+    .setting-card { background:var(--white); padding:19px; border:1px solid var(--line); border-radius:18px; margin-bottom:13px; }
+    .setting-card h3 { font:normal 20px Georgia,serif; margin:0 0 9px; }
+    .setting-card p { font-size:12px; line-height:1.6; color:var(--muted); }
+    .setting-card label { font-weight:700; font-size:12px; display:block; margin:13px 0 7px; }
+    .setting-card input[type="number"] { width:145px; padding:10px 12px; border:1px solid var(--line); border-radius:9px; background:#fff; }
+    .primary { display:inline-block; background:var(--plum); color:#fff; border:none; padding:13px 17px; border-radius:11px; font-size:12px; font-weight:700; text-align:center; }
+    .secondary { display:inline-block; background:#f4edef; color:var(--plum); border:1px solid #e6d3dc; padding:12px 15px; border-radius:11px; font-size:12px; font-weight:700; }
+    .danger { color:#922b40; background:#fff3f3; border:1px solid #e9ccd1; }
+    .button-row { display:flex; flex-wrap:wrap; gap:9px; align-items:center; }
+    .hidden { display:none !important; }
+    .sr-only { position:absolute; overflow:hidden; width:1px; height:1px; clip:rect(0,0,0,0); white-space:nowrap; }
+    .toast { position:fixed; bottom:calc(93px + env(safe-area-inset-bottom)); left:50%; transform:translateX(-50%); background:var(--ink); color:#fff; padding:12px 18px; border-radius:100px; font-size:12px; box-shadow:0 7px 26px #0003; z-index:100; max-width:calc(100vw - 36px); text-align:center; }
+    @media (prefers-reduced-motion:reduce) { html {scroll-behavior:auto} .fill,.check {transition:none} }
+    @media (min-width:541px) { .top { margin-top:15px; border-radius:24px; } .app { border-left:1px solid #eae2dd; border-right:1px solid #eae2dd; } }
+
+    /* 2026 editorial refinement: oversized, animated daily score */
+    :root { --cream:#f5f1eb; --white:#fdfbf8; --line:#e7dedf; --muted:#82777d; --pale:#f0e7e9; }
+    body { background:var(--cream); letter-spacing:-.005em; }
+    .app { max-width:540px; }
+    .top { position:relative; border-radius:0 0 28px 28px; padding:calc(28px + env(safe-area-inset-top)) 25px 25px; background:#561331; overflow:hidden; }
+    .top::before { content:''; position:absolute; top:-110px; right:-135px; width:250px; height:250px; border:1px solid #ffffff10; border-radius:50%; pointer-events:none; }
+    .top::after { content:''; position:absolute; top:-65px; right:-90px; width:165px; height:165px; border:1px solid #ffffff10; border-radius:50%; pointer-events:none; }
+    .brand { font-size:10px; font-weight:650; color:#f7edf0; white-space:nowrap; letter-spacing:.09em; }
+    .dayspill { letter-spacing:.1em; font-size:9px; padding:9px 11px; border-color:#ffffff4d; }
+    .hero-heading { padding:23px 0 29px; }
+    .hero-eyebrow { color:#e1c2d1; font-size:9px; letter-spacing:.23em; font-weight:650; }
+    .top h1 { font-size:34px; margin:13px 0 5px; letter-spacing:-.042em; }
+    .subtitle { font-size:11px; color:#e7d1dc; letter-spacing:.035em; }
+    .hero-progress { position:relative; background:#ffffff0c; border:1px solid #ffffff39; border-radius:20px; padding:19px 19px 15px; box-shadow:0 2px 10px #21061213; }
+    .hero-progress-top { display:flex; align-items:center; justify-content:space-between; gap:8px; font-size:9px; font-weight:680; color:#e9d4dd; letter-spacing:.15em; }
+    .hero-score { display:flex; align-items:flex-end; justify-content:space-between; gap:10px; padding:7px 0 17px; }
+    .hero-score strong { font:normal 83px/.96 Georgia, "Times New Roman", serif; letter-spacing:-.075em; color:#fff9f7; font-variant-numeric:tabular-nums; min-width:0; }
+    .hero-status { display:flex; flex-direction:column; gap:6px; text-align:right; padding:0 0 9px; max-width:135px; }
+    .hero-status span:first-child { font-size:9px; font-weight:800; color:#efd4df; letter-spacing:.12em; }
+    .hero-status span:last-child { font:italic 12px/1.35 Georgia,serif; color:#f4e6ec; }
+    .hero-track { width:100%; height:8px; background:#ffffff36; overflow:hidden; border-radius:50px; }
+    .hero-track-fill { height:100%; width:0; background:#f8eee8; border-radius:50px; transition:width .38s cubic-bezier(.2,.8,.2,1); }
+    .hero-progress-bottom { display:flex; justify-content:space-between; gap:8px; margin-top:13px; color:#e5cdd7; font-size:8px; font-weight:670; letter-spacing:.09em; }
+    .floating-progress { position:fixed; top:calc(8px + env(safe-area-inset-top)); left:50%; transform:translate(-50%,-150%); opacity:0; pointer-events:none; z-index:45; width:min(calc(100% - 24px),506px); border:1px solid #e6d8de; border-radius:15px; background:#fffcf9f5; box-shadow:0 9px 28px #3b132327; padding:10px 14px 10px 16px; display:flex; gap:14px; align-items:center; transition:transform .25s ease, opacity .25s ease; backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); }
+    .floating-progress.is-visible { transform:translate(-50%,0);opacity:1; }
+    .floating-label { flex:1; white-space:nowrap; font-size:9px; font-weight:750; letter-spacing:.11em; color:var(--plum); }
+    .floating-label i { display:inline-block; width:3px; height:3px; background:#ab8999; border-radius:50%; vertical-align:middle; margin:0 4px; }
+    .floating-progress strong { font:normal 27px Georgia,serif; min-width:52px; text-align:right; color:var(--plum); font-variant-numeric:tabular-nums; }
+    .floating-track { height:5px; background:#ecdee4; border-radius:10px; width:35%; overflow:hidden; }
+    .floating-track div { height:100%; background:var(--plum); border-radius:10px; transition:width .25s ease; }
+    .app:not([data-view="today"]) .hero-progress { display:none; }
+    .app:not([data-view="today"]) .hero-heading { padding-bottom:7px; }
+    .content { padding:20px 16px 0; }
+    .datebar { padding:2px 2px 17px; }
+    .datebar .date { font-size:23px; letter-spacing:-.028em; }
+    .circlebtn { width:38px; height:38px; background:var(--white); }
+    .progress-card { border-radius:17px; }
+    .compact-breakdown { padding:17px 16px 17px; }
+    .breakdown-intro { display:flex; align-items:baseline; justify-content:space-between; gap:10px; }
+    .breakdown-line { font:italic 13px Georgia,serif; color:#a07888; }
+    .compact-breakdown .subbars { margin-top:14px; padding-top:14px; gap:13px; }
+    .subbar .name { font-size:11px; }
+    .bar { height:6px; }
+    .focus-card { border:1px solid #e9e0dc; background:#ece6e2; border-radius:15px; margin-top:-3px; }
+    .focus-item strong { font-size:17px; }
+    .section { margin-top:14px; padding:18px 16px 8px; border-radius:18px; }
+    .sect-head h3 { font-size:23px; }
+    .sect-icon { font-size:18px; background:#f4e9ee; }
+    .task { min-height:59px; }
+    .check { width:24px; height:24px; flex-basis:24px; border-radius:7px; }
+    .task-label { font-size:13.5px; }
+    .prayer { min-height:66px; }
+    .tabs { background:#fffcf9f8; }
+    .month-panel { padding:22px 16px 18px; }
+    .month-average strong { font-size:42px; }
+    .month-top .month { font-size:24px; }
+    @media(max-width:365px){ .hero-score strong { font-size:70px; }.hero-status { max-width:112px; }.top { padding-left:19px; padding-right:19px; }.hero-progress { padding-left:15px;padding-right:15px; }.brand { font-size:9px; } }
+    @media(prefers-reduced-motion:reduce){ .hero-track-fill,.floating-progress,.floating-track div { transition:none; } }
+  </style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brandrow"><div class="brand">M Y &nbsp; R E S E T</div><div id="dayPill" class="dayspill">DAY 01 / 60</div></div>
+    <div class="hero-heading"><div class="hero-eyebrow">THE DAILY EDIT</div><h1>60 days, for me.</h1><p class="subtitle">Deen. Hair. Health. Home.</p></div>
+    <div class="hero-progress" aria-label="Today's completion percentage">
+      <div class="hero-progress-top"><span>YOUR DAILY PROGRESS</span><span id="heroDate">NOV 10</span></div>
+      <div class="hero-score"><strong id="heroPercent" aria-live="polite" aria-atomic="true">0%</strong><div class="hero-status"><span>OF YOUR DAY</span><span id="heroMood">A fresh start.</span></div></div>
+      <div class="hero-track" role="presentation"><div id="heroFill" class="hero-track-fill" style="width:0%"></div></div>
+      <div class="hero-progress-bottom"><span id="heroCheckCount">0 / 17 CHECKED OFF</span><span>ONE THING AT A TIME</span></div>
+    </div>
+  </header>
+  <div class="floating-progress" id="floatingProgress" aria-hidden="true"><span class="floating-label">MY RESET <i></i> TODAY</span><div class="floating-track"><div id="floatingFill"></div></div><strong id="floatingPercent">0%</strong></div>
+  <main id="main" class="content"><div class="notice">Your checklist loads when opened as a Home Screen web app. If it is blank in a file preview, open the hosted app link in Safari instead.</div></main>
+  <nav class="tabs" aria-label="Main navigation">
+    <button class="tab active" data-tab="today"><span class="tab-icon" aria-hidden="true">◉</span>Today</button>
+    <button class="tab" data-tab="calendar"><span class="tab-icon" aria-hidden="true">▦</span>Months</button>
+    <button class="tab" data-tab="settings"><span class="tab-icon" aria-hidden="true">⚙</span>Settings</button>
+  </nav>
+</div>
+<div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+<input class="hidden" type="file" id="importFile" accept="application/json,.json" />
+<script>
+(() => {
+  'use strict';
+  const STORAGE_KEY = 'my_reset_60days_2026_v1';
+  const START = new Date(2026, 10, 10);
+  const DAYS = 60;
+  const allDates = Array.from({length:DAYS},(_,i)=>{const d = new Date(2026,10,10+i);return dateKey(d)});
+  const endDate = allDates[allDates.length-1];
+  const TASKS = {
+    morning: [
+      ['iron','Take iron','health'],
+      ['viviscal_am','Viviscal supplement','hair'],
+      ['serum_am','Scalp serum','hair'],
+      ['skincare','Skincare','health'],
+      ['journal','Morning journal','health']
+    ],
+    day: [
+      ['meal','One meal at 5:00 PM','health'],
+      ['quran','Qur’an: memorize ½ page','faith'],
+      ['fajr','Fajr','faith'],['dhuhr','Dhuhr','faith'],['asr','Asr','faith'],['maghrib','Maghrib','faith'],['isha','Isha','faith']
+    ],
+    night: [
+      ['shower','Nightly shower','health'],
+      ['viviscal_pm','Viviscal supplement','hair'],
+      ['birthcontrol','Birth control','health'],
+      ['serum_pm','Scalp serum','hair'],
+      ['house','House closing shift / light clean','home']
+    ]
+  };
+  const ids = Object.values(TASKS).flat().map(t=>t[0]);
+  // Calories and steps each contribute one goal, earning partial credit as they progress.
+  const TOTAL = ids.length + 2;
+  let state = load();
+  let selected = allDates.includes(dateKey(new Date())) ? dateKey(new Date()) : allDates[0];
+  let activeTab = 'today';
+  let journalOpen = false;
+  let toastTimer;
+
+  function dateKey(d) { return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; }
+  function parseDay(k) { const [y,m,d] = k.split('-').map(Number);return new Date(y,m-1,d); }
+  function load() { try { const obj=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');return {days:obj.days&&typeof obj.days==='object'?obj.days:{},goal:obj.goal>0&&obj.goal<=12000?obj.goal:2500}; } catch(e){return {days:{},goal:2500};} }
+  function save() { try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state))}catch(e){toast('Could not save. Check browser storage settings.')} }
+  function dayData(k=selected) { return state.days[k] || {checks:{},calories:0,steps:0,journal:''}; }
+  function writeDay(k,fn) {const day=Object.assign({checks:{},calories:0,steps:0,journal:''},state.days[k]||{});day.checks={...day.checks};fn(day);state.days[k]=day;save();}
+  function isSunday(k){return parseDay(k).getDay()===0;}
+  function calorieFraction(day){return Math.min(1,Math.max(0,Number(day.calories)||0)/state.goal)}
+  function stepFraction(day){return Math.min(1,Math.max(0,Number(day.steps)||0)/20000)}
+  function score(day){return ids.reduce((n,id)=>n+(day.checks?.[id]?1:0),0)+calorieFraction(day)+stepFraction(day)}
+  function percent(day) {return Math.min(100,Math.round(100*score(day)/TOTAL))}
+  function sectionPercent(day,section) {const list=TASKS[section];const max=list.length+(section==='day'?2:0);let val=list.reduce((n,t)=>n+(day.checks?.[t[0]]?1:0),0);if(section==='day')val+=calorieFraction(day)+stepFraction(day);return Math.round(100*val/max)}
+  function categoryPercent(day,cat){const catIds=Object.values(TASKS).flat().filter(t=>t[2]===cat).map(t=>t[0]);let count=catIds.reduce((n,id)=>n+(day.checks?.[id]?1:0),0);let total=catIds.length;if(cat==='health'){count+=calorieFraction(day)+stepFraction(day);total+=2;}return Math.round(count*100/total)}
+  function escapeHtml(s) {return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]))}
+  function selectedIndex(){return allDates.indexOf(selected)}
+  function longDate(k){return parseDay(k).toLocaleDateString('en-US',{weekday:'long',month:'short',day:'numeric'})}
+  function toast(msg){let el=document.getElementById('toast');el.textContent=msg;el.classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.add('hidden'),2300)}
+  function taskRow(task,day){ const [id,label]=task;const checked=!!day.checks?.[id];const q=id==='quran'&&isSunday(selected);const title=q?'Qur’an: Sunday review':label;const note=q?'Review and connect everything memorized this week': id==='iron'||id==='birthcontrol'?'Take as directed':null;return `<div class="task ${checked?'done':''}"><label class="task-action" for="check-${id}"><input class="sr-only" type="checkbox" id="check-${id}" data-check="${id}" ${checked?'checked':''}><span class="check" aria-hidden="true"></span><span><span class="task-label">${escapeHtml(title)}</span>${note?`<div class="task-note">${note}</div>`:''}</span></label>${id==='journal'?`<button class="rowbtn" data-action="journal">${journalOpen?'Hide':'Write'}</button>`:''}${q?'<span class="special">REVIEW</span>':''}</div>`; }
+  function sectionHeading(title,icon,day,section){return `<div class="sect-head"><div class="sect-left"><span class="sect-icon" aria-hidden="true">${icon}</span><h3>${title}</h3></div><span class="sect-count" data-section-percent="${section}">${sectionPercent(day,section)}%</span></div>`}
+  function prayerBox(day){const prayers=[['fajr','Fajr'],['dhuhr','Dhuhr'],['asr','Asr'],['maghrib','Maghrib'],['isha','Isha']];let count=prayers.filter(([id])=>day.checks?.[id]).length;return `<div class="miniheading">5 daily salah <span style="float:right;letter-spacing:0">${count}/5</span></div><div class="prayer-grid">${prayers.map(([id,name])=>`<button class="prayer ${day.checks?.[id]?'checked':''}" aria-label="${name} prayer ${day.checks?.[id]?'complete':'not complete'}" aria-pressed="${!!day.checks?.[id]}" data-prayer="${id}"><span class="prayer-mark">${day.checks?.[id]?'✓':'○'}</span><span class="prayer-name">${name}</span></button>`).join('')}</div>`}
+  function renderToday(){const day=dayData();let n=selectedIndex(),p=percent(day);const checked=ids.filter(id=>day.checks?.[id]).length;const kcalPct=Math.round(calorieFraction(day)*100);const stepsPct=Math.round(stepFraction(day)*100);return `
+    <div class="datebar"><div><span class="eyebrow">Your daily checklist</span><div class="date">${longDate(selected)}</div><small>Day ${n+1} of 60 · ${isSunday(selected)?'Qur’an review day':'Memorization day'}</small></div><div class="navarrows"><button class="circlebtn" aria-label="Previous day" data-action="prev" ${n===0?'disabled':''}>‹</button><button class="circlebtn" aria-label="Next day" data-action="next" ${n===59?'disabled':''}>›</button></div></div>
+    <div class="progress-card compact-breakdown"><div class="breakdown-intro"><span class="eyebrow">Your routine, at a glance</span><span class="breakdown-line">little by little</span></div><div class="subbars">${[['morning','Morning'],['day','Day'],['night','Night']].map(([key,name])=>`<div class="subbar"><div class="name"><span>${name}</span><strong data-label-percent="${key}">${sectionPercent(day,key)}%</strong></div><div class="bar"><div class="fill" data-fill-percent="${key}" style="width:${sectionPercent(day,key)}%"></div></div></div>`).join('')}</div></div>
+    <div class="focus-card" aria-label="Daily progress by focus area">${[['faith','Deen'],['hair','Hair'],['health','Health'],['home','Home']].map(([cat,label])=>`<div class="focus-item"><strong data-category-percent="${cat}">${categoryPercent(day,cat)}%</strong><small>${label}</small></div>`).join('')}</div>
+    <section class="section">${sectionHeading('Morning','☀',day,'morning')}${TASKS.morning.map(t=>taskRow(t,day)).join('')}${journalOpen?`<div class="journal"><label class="sr-only" for="journalText">Morning journal notes</label><textarea id="journalText" placeholder="A thought, intention, dua, or something you're grateful for…">${escapeHtml(day.journal||'')}</textarea></div>`:''}</section>
+    <section class="section">${sectionHeading('During the day','◷',day,'day')}
+      <div class="kcal-box"><div class="kcal-header"><strong>Total calories burned</strong><span class="pct" id="calPct">${kcalPct}%</span></div><div class="kcal-line"><input id="calories" type="number" inputmode="numeric" min="0" max="12000" step="1" aria-label="Total calories burned today" placeholder="0" value="${Number(day.calories)||''}"/><small>of ${Number(state.goal).toLocaleString()} kcal estimated daily total</small></div><div class="bar"><div class="fill" id="calFill" style="width:${kcalPct}%"></div></div><p class="kcal-note">Enter your estimated <strong>total daily burn</strong> (resting + activity), not just workout calories. This is a tracking estimate, not a reason to overexercise.</p></div>
+      <div class="kcal-box"><div class="kcal-header"><strong>Daily steps</strong><span class="pct" id="stepsPct">${stepsPct}%</span></div><div class="kcal-line"><input id="steps" type="number" inputmode="numeric" min="0" max="100000" step="1" aria-label="Steps walked today" placeholder="0" value="${Number(day.steps)||''}"/><small>of 20,000 steps</small></div><div class="bar"><div class="fill" id="stepsFill" style="width:${stepsPct}%"></div></div><p class="kcal-note">Enter the steps from your phone or wearable. This updates the bar and daily percentage.</p></div>${TASKS.day.slice(0,2).map(t=>taskRow(t,day)).join('')}${prayerBox(day)}</section>
+    <section class="section">${sectionHeading('Night','☾',day,'night')}${TASKS.night.map(t=>taskRow(t,day)).join('')}</section>
+    <div class="notice"><strong>Gentle reminder:</strong> Your energy, nutrition, and recovery matter. A single meal may not provide enough for everyone, especially with 20,000 steps per day. Adjust activity and food intake to suit your health and recovery. Take iron, Viviscal, and birth control according to their respective instructions. Your daily progress is a tool, not a health score.</div>
+    <div class="footnote">Keep the promise. Start again tomorrow.</div>`}
+  function renderCalendar(){
+    const records=allDates.map(k=>({k,day:dayData(k)}));
+    const months=[{y:2026,m:10,title:'November 2026'},{y:2026,m:11,title:'December 2026'},{y:2027,m:0,title:'January 2027'}];
+    const today=dateKey(new Date());
+    const overall=records.filter(x=>x.k<=today);
+    const average=items=>items.length?Math.round(items.reduce((s,x)=>s+percent(x.day),0)/items.length):0;
+    const overallAverage=average(overall);
+    return `<h2 class="view-title">Your months, in progress.</h2><p class="view-desc">Your average updates as you complete each day. Past days count even if you missed them; future days never bring your average down.</p>
+    <div class="progress-card"><div class="progress-main"><div class="ring" style="--percentage:${overallAverage}"><div class="ring-inner"><strong>${overall.length?overallAverage+'%':'—'}</strong><span>all months</span></div></div><div class="progress-copy"><span class="eyebrow">Overall average</span><h2>${overall.length?`${overall.length} days elapsed`:'Your reset starts soon'}</h2><p>Average daily completion across the challenge so far.</p></div></div></div>
+    ${months.map(mon=>{
+      const keys=allDates.filter(k=>{const d=parseDay(k);return d.getFullYear()===mon.y&&d.getMonth()===mon.m});
+      const eligible=keys.filter(k=>k<=today);
+      const avg=average(eligible.map(k=>({day:dayData(k)})));
+      const perfect=keys.filter(k=>k<=today&&percent(dayData(k))===100).length;
+      const checked=keys.reduce((sum,k)=>sum+ids.filter(id=>dayData(k).checks?.[id]).length,0);
+      const full=keys.length*ids.length;
+      const totals=keys.reduce((sum,k)=>sum+score(dayData(k)),0);
+      const firstDay=new Date(mon.y,mon.m,1);const offset=(firstDay.getDay()+6)%7;
+      const max=new Date(mon.y,mon.m+1,0).getDate();
+      const cells=Array.from({length:offset},()=>'<div class="daycell out"></div>');
+      for(let d=1;d<=max;d++){
+        const k=dateKey(new Date(mon.y,mon.m,d));
+        if(!keys.includes(k)){cells.push('<div class="daycell out"></div>');continue;}
+        const pct=percent(dayData(k));const future=k>today;
+        cells.push(`<button class="daycell ${k===selected?'selected':''}" data-day="${k}" aria-label="${longDate(k)} ${future?'not yet started':pct+' percent complete'}"><span class="dn">${d}</span><span class="mini">${future?'·':pct+'%'}</span><span class="dot"><b style="width:${future?0:pct}%"></b></span></button>`);
+      }
+      return `<section class="month-panel"><div class="month-top"><div><span class="eyebrow">Monthly overview</span><h3 class="month">${mon.title}</h3></div><div class="month-average"><strong>${eligible.length?avg+'%':'—'}</strong><span>average</span></div></div>
+      <div class="bar month-bar"><div class="fill" style="width:${avg}%"></div></div>
+      <div class="month-metrics"><div><strong>${checked} <small>/ ${full}</small></strong><span>checkoffs completed</span></div><div><strong>${perfect}</strong><span>perfect days</span></div><div><strong>${eligible.length} <small>/ ${keys.length}</small></strong><span>days elapsed</span></div></div>
+      <div class="calendar">${['M','T','W','T','F','S','S'].map(s=>`<span class="weekday">${s}</span>`).join('')}${cells.join('')}</div>
+      </section>`;
+    }).join('')}<div class="notice">November includes Nov 10–30 (21 days), December includes 31 days, and January includes Jan 1–8 (8 days). Tap any date to open its checklist.</div>`;
+  }
+  function renderSettings(){return `<h2 class="view-title">Make it yours</h2><p class="view-desc">Your reset, your phone, your pace.</p><section class="setting-card"><h3>Calorie progress</h3><p>You asked for a bar that reaches 100% at 2,500 calories. This app interprets that as the <strong>total daily energy burned</strong> estimate, not 2,500 exercise-only calories.</p><label for="calGoal">Daily total-burn reference (kcal)</label><div class="button-row"><input type="number" inputmode="numeric" min="500" max="12000" step="100" id="calGoal" value="${state.goal}"><button class="primary" data-action="saveGoal">Save goal</button></div></section><section class="setting-card"><h3>Keep your progress private</h3><p>Nothing is uploaded or shared by this app. Your checkboxes, calories, and journal stay in this browser's local storage on this device. There is no account or cloud sync. Anyone who can unlock your phone and open the app may see the entries.</p><div class="button-row"><button class="primary" data-action="export">Export backup</button><button class="secondary" data-action="import">Import backup</button></div><p>Export a backup occasionally. Clearing Safari website data or deleting the app can erase the saved progress.</p></section><section class="setting-card"><h3>Your plan</h3><p>November 10, 2026 – January 8, 2027. Every day includes 20,000 steps, five salah, both serum applications, morning and night routines, the daily Qur’an goal (Sunday review), and your calorie reference.</p><p>Meal time is set to 5:00 PM as requested. Consider professional guidance on OMAD, particularly if you have a high activity level, and do not use the app as a substitute for medication instructions.</p></section><section class="setting-card"><h3>Reset the tracker</h3><p>Clear all checkboxes, calorie entries, and journals. This cannot be undone unless you exported a backup.</p><button class="secondary danger" data-action="reset">Erase all saved progress</button></section>`}
+  let progressAnimation=0;
+  function updateFloating(){const onToday=activeTab==='today';const hero=document.querySelector('.hero-progress');const show=onToday&&hero&&hero.getBoundingClientRect().bottom<44;document.getElementById('floatingProgress')?.classList.toggle('is-visible',!!show)}
+  function updateHero(previous){
+    const day=dayData(),p=percent(day),done=ids.filter(id=>day.checks?.[id]).length;
+    const setNum=v=>{for(const id of ['heroPercent','floatingPercent']){const el=document.getElementById(id);if(el)el.textContent=v+'%'}};
+    const hDate=document.getElementById('heroDate');if(hDate)hDate.textContent=parseDay(selected).toLocaleDateString('en-US',{month:'short',day:'numeric'}).toUpperCase();
+    const count=document.getElementById('heroCheckCount');if(count)count.textContent=done+' / '+ids.length+' CHECKED OFF';
+    const mood=document.getElementById('heroMood');if(mood)mood.textContent=p===100?'Everything completed.':p>0?'Look at your progress.':'A fresh start.';
+    const bar=document.getElementById('heroFill');if(bar)bar.style.width=p+'%';
+    const floatingBar=document.getElementById('floatingFill');if(floatingBar)floatingBar.style.width=p+'%';
+    progressAnimation++;
+    const token=progressAnimation;
+    if(typeof previous!=='number'||previous===p||window.matchMedia('(prefers-reduced-motion: reduce)').matches){setNum(p);return;}
+    setNum(previous);
+    const began=performance.now();
+    const tick=now=>{if(token!==progressAnimation)return;const time=Math.min(1,(now-began)/380);const ease=1-Math.pow(1-time,3);setNum(Math.round(previous+(p-previous)*ease));if(time<1)requestAnimationFrame(tick)};
+    requestAnimationFrame(tick);
+  }
+  function render(priorPercent){
+    const main=document.getElementById('main');main.innerHTML=activeTab==='today'?renderToday():activeTab==='calendar'?renderCalendar():renderSettings();
+    document.querySelector('.app').dataset.view=activeTab;
+    document.querySelectorAll('[data-tab]').forEach(el=>{el.classList.toggle('active',el.dataset.tab===activeTab);el.setAttribute('aria-current',el.dataset.tab===activeTab?'page':'false')});
+    document.getElementById('dayPill').textContent=`DAY ${String(selectedIndex()+1).padStart(2,'0')} / 60`;
+    updateHero(priorPercent);updateFloating();
+  }
+  function changeDay(delta){const i=selectedIndex()+delta;if(i<0||i>=DAYS)return;selected=allDates[i];journalOpen=false;render()}
+  function checkItem(id,value){if(!ids.includes(id))return;const before=percent(dayData());writeDay(selected,d=>{d.checks[id]=value});render(before);if(percent(dayData())===100)toast('Today is 100% complete ✓')}
+  function updateCalorieUI(){const d=dayData();const p=percent(d);const k=Math.round(calorieFraction(d)*100);const el=id=>document.getElementById(id);if(el('calPct'))el('calPct').textContent=k+'%';if(el('calFill'))el('calFill').style.width=k+'%';const st=Math.round(stepFraction(d)*100);if(el('stepsPct'))el('stepsPct').textContent=st+'%';if(el('stepsFill'))el('stepsFill').style.width=st+'%';const prior=Number(document.getElementById('heroPercent')?.textContent.replace('%',''))||0;updateHero(prior);if(el('statusTitle'))el('statusTitle').textContent=p===100?'All done.':'Keep showing up.';for(const cat of ['faith','hair','health','home']){document.querySelectorAll(`[data-category-percent="${cat}"]`).forEach(e=>e.textContent=categoryPercent(d,cat)+'%')}for(const sec of ['morning','day','night']){const pct=sectionPercent(d,sec);document.querySelectorAll(`[data-section-percent="${sec}"],[data-label-percent="${sec}"]`).forEach(e=>e.textContent=pct+'%');document.querySelectorAll(`[data-fill-percent="${sec}"]`).forEach(e=>e.style.width=pct+'%')} }
+  document.addEventListener('click',async(e)=>{const t=e.target.closest('button');if(!t)return;if(t.dataset.tab){activeTab=t.dataset.tab;render();window.scrollTo({top:0,behavior:'smooth'});return;}if(t.dataset.prayer){const id=t.dataset.prayer;checkItem(id,!dayData().checks?.[id]);return}if(t.dataset.day){selected=t.dataset.day;activeTab='today';journalOpen=false;render();window.scrollTo({top:0,behavior:'smooth'});return;}switch(t.dataset.action){case 'prev':changeDay(-1);break;case 'next':changeDay(1);break;case 'journal':journalOpen=!journalOpen;render();if(journalOpen){const field=document.getElementById('journalText');field?.focus()}break;case 'saveGoal':{const goal=Number(document.getElementById('calGoal').value);if(!Number.isInteger(goal)||goal<500||goal>12000){toast('Use a value between 500 and 12,000');return;}state.goal=goal;save();render();toast('Updated your total-burn reference');break;}case 'export':{const json=JSON.stringify({app:'My Reset 60 Days',version:1,...state},null,2);const blob=new Blob([json],{type:'application/json'});const link=document.createElement('a');const url=URL.createObjectURL(blob);link.href=url;link.download=`my-reset-backup-${dateKey(new Date())}.json`;link.click();setTimeout(()=>URL.revokeObjectURL(url),1500);toast('Backup download started');break;}case 'import':document.getElementById('importFile').click();break;case 'reset':{if(!window.confirm('Erase all 60 days of progress and journal entries? Make a backup first if you may need them.'))return;state={goal:2500,days:{}};save();render();toast('Tracker reset');break;}} });
+  document.addEventListener('change',e=>{if(e.target.matches('[data-check]'))checkItem(e.target.dataset.check,e.target.checked);if(e.target.id==='calories'){const raw=Number(e.target.value)||0;writeDay(selected,d=>d.calories=Math.min(12000,Math.max(0,raw)));updateCalorieUI();}if(e.target.id==='steps'){const raw=Number(e.target.value)||0;writeDay(selected,d=>d.steps=Math.min(100000,Math.max(0,raw)));updateCalorieUI();}});
+  document.addEventListener('input',e=>{if(e.target.id==='journalText'){writeDay(selected,d=>d.journal=e.target.value)}if(e.target.id==='calories'){const v=Number(e.target.value)||0;writeDay(selected,d=>d.calories=Math.min(12000,Math.max(0,v)));updateCalorieUI();}if(e.target.id==='steps'){const v=Number(e.target.value)||0;writeDay(selected,d=>d.steps=Math.min(100000,Math.max(0,v)));updateCalorieUI();}});
+  document.getElementById('importFile').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{const obj=JSON.parse(await file.text());if(obj.app!=='My Reset 60 Days'||!obj.days||typeof obj.days!=='object')throw Error('wrong file');if(!window.confirm('Replace the existing saved data with this backup?'))return;state={days:obj.days,goal:Number(obj.goal)||2500};save();render();toast('Backup restored');}catch(err){toast('That was not a valid My Reset backup')}finally{e.target.value=''}});
+  window.addEventListener('scroll',updateFloating,{passive:true});
+  window.addEventListener('resize',updateFloating,{passive:true});
+  render();
+})();
+</script>
+</body>
+</html>
