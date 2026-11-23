@@ -21,6 +21,13 @@ button,input{font:inherit;color:inherit}button,input[type=date],input[type=numbe
 .checks{display:grid;gap:5px;margin-top:10px}.check{display:flex;align-items:center;gap:9px;min-height:39px;padding:4px 9px;border:1px solid var(--line);border-radius:10px;cursor:pointer}.check:has(input:checked){background:#EEEADD}.check input{width:17px;height:17px;accent-color:var(--navy)}.facts{display:flex;gap:18px;flex-wrap:wrap;margin:13px 0}.facts b{font-size:21px;display:block}.fields{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.fields label{flex:1;min-width:125px}.fields input{width:100%;margin-top:4px}.primary{background:var(--navy);color:white;border:0}.reward{background:#E9E3D5;margin-top:15px;padding:17px 22px;border-radius:18px;color:var(--navy)}.reward p{margin-bottom:0}details{margin-top:12px}summary{cursor:pointer;font-weight:650;color:var(--navy)}.juz-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:6px;margin-top:10px}.juz-list small{display:block}a{color:var(--navy)}.foot{font-size:12px;margin:14px 2px}.status{color:var(--navy);min-height:1.5em}.hidden,[hidden]{display:none!important}.tabs{display:flex;gap:8px;margin:18px 0}.tabs a{min-height:42px;display:grid;place-items:center;text-decoration:none;border:1px solid var(--line);border-radius:12px;padding:7px 19px;background:var(--white);font-weight:650}.tabs a[aria-current="page"]{background:var(--navy);color:white;border-color:var(--navy)}.history{margin:0 0 15px}.history-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}.history-grid button{padding:4px 1px;min-width:0;line-height:1.15}.history-grid small{display:block;font-size:10px;margin-top:4px}.history-grid button.complete{background:var(--sand)}.history-grid button[aria-pressed=true]{background:var(--navy);color:white;border-color:var(--navy)}.history-grid button[aria-pressed=true] small{color:white}.weekday{text-align:center;font-size:11px;color:var(--muted)}.month-nav{display:flex;align-items:center;justify-content:space-between;margin:8px 0}.daily-summary{margin:18px 2px 6px}.daily-summary p{margin:5px 0}.page-title{font-size:34px;margin:8px 0 13px}
 @media(max-width:650px){main{padding-top:15px}.cards{grid-template-columns:minmax(0,1fr)}.hero{border-radius:23px}.ring{width:84px}.ring span{width:70px;height:70px;font-size:20px}.card{padding:17px}.hero h1{max-width:220px}}
 
+.savings-overview{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;flex-wrap:wrap;margin:6px 0 18px}
+.savings-overview>div{display:grid;gap:3px}.savings-overview strong{color:var(--navy);font-variant-numeric:tabular-nums;font-size:23px}
+.savings-overview small{display:block}.savings-target{text-align:right;color:var(--muted);font-size:13px}.savings-target strong{font-size:17px}
+.savings-goals{display:grid;gap:5px}.savings-goal{padding:12px 0;border-top:1px solid var(--line)}.savings-line{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+.savings-line strong{color:var(--navy)}.savings-line span{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}.savings-line b{color:var(--ink);font-size:15px}
+.savings-goal progress{margin:7px 0 2px}.savings-goal small{font-size:12px}.savings-goal:last-child{margin-bottom:12px}
+@media(max-width:650px){.savings-overview strong{font-size:21px}.savings-line span{font-size:12px}}
 /* Turning 23 · debt progress */
 .debt-card{background:linear-gradient(150deg,#FFFCF4 0%,#F8F3E8 100%)}
 .debt-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:15px 0}
@@ -85,7 +92,17 @@ button,input{font:inherit;color:inherit}button,input[type=date],input[type=numbe
 <h2 id="growthTitle" class="page-title">Growth</h2>
 <div class="cards">
 <article class="card"><div id="weightProgress"></div><div class="facts"><div><b>170 → 125 lb</b><small>November to July</small></div><div><b>~1,500 kcal</b><small>Starting daily estimate</small></div></div><p class="muted">At an estimated 2,000 kcal daily burn, this is about a 500 kcal deficit. Check that 125 lb fits your height and health, and adjust as your weight trend and energy needs change. <a href="https://www.niddk.nih.gov/bwp" target="_blank" rel="noopener">NIH Body Weight Planner</a></p><form id="health"><div class="fields"><label>Calories eaten<input name="calories" type="number" min="0" max="15000" placeholder="kcal"></label><label>Weight<input name="weight" type="number" min="1" max="1000" step="0.1" placeholder="lb"></label></div><button class="primary">Save entry for selected date</button></form><p id="weightSummary" class="muted"></p></article>
-<article class="card"><div id="financeProgress"></div><div class="facts"><div><b id="savedBalance"></b><small>Savings · $10,000 goal</small></div><div><b id="checkingBalance"></b><small>Checking · $1,000 after bills</small></div></div><p id="paySummary" class="muted"></p><div class="checks" id="payCheck"></div><form id="finance"><div class="fields"><label>January savings balance<input name="starting" type="number" min="0" max="10000000" step=".01" required></label><label>Current checking balance<input name="checking" type="number" min="0" max="10000000" step=".01" required></label></div><button class="primary">Save balances</button></form><details><summary>Paydays</summary><div class="checks" id="paydays"></div></details></article>
+<article class="card" aria-label="Birthday savings goals">
+  <div id="financeProgress"></div>
+  <div class="savings-overview"><div><strong id="savingsTotal">$3,535.99</strong><small>Saved across all three accounts</small></div><div class="savings-target">Goal: <strong>$13,000</strong><small id="savingsRemaining">$9,464.01 to go</small></div></div>
+  <div class="savings-goals">
+    <div class="savings-goal"><div class="savings-line"><strong>Emergency</strong><span><b id="emergencyBalance">$3,000.00</b> / $10,000</span></div><progress id="emergencyBar" aria-label="Emergency fund progress" max="10000" value="3000"></progress><small id="emergencyRemaining">$7,000.00 to go</small></div>
+    <div class="savings-goal"><div class="savings-line"><strong>Travel Fund</strong><span><b id="travelBalance">$523.52</b> / $2,000</span></div><progress id="travelBar" aria-label="Travel fund progress" max="2000" value="523.52"></progress><small id="travelRemaining">$1,476.48 to go</small></div>
+    <div class="savings-goal"><div class="savings-line"><strong>Checking</strong><span><b id="checkingBalance">$12.47</b> / $1,000</span></div><progress id="checkingBar" aria-label="Checking account progress" max="1000" value="12.47"></progress><small id="checkingRemaining">$987.53 to go</small></div>
+  </div>
+  <form id="finance"><div class="fields"><label>Emergency balance<input name="emergency" type="number" min="0" max="10000000" step=".01" required></label><label>Travel balance<input name="travel" type="number" min="0" max="10000000" step=".01" required></label><label>Checking balance<input name="checking" type="number" min="0" max="10000000" step=".01" required></label></div><button class="primary">Save balances</button></form>
+  <p id="paySummary" class="muted"></p><div class="checks" id="payCheck"></div><details><summary>Paydays</summary><small>Payday checkmarks are reminders; update your actual account balances above.</small><div class="checks" id="paydays"></div></details>
+</article>
 
 <article class="card wide debt-card" id="debtCard">
   <div id="debtProgress"></div>
@@ -168,10 +185,26 @@ function describePortions(assignment){
  return groups.map(({name,first,last})=>name+(first===last?" · ayah "+first:" · ayat "+first+"–"+last)).join(" / ");
 }
 const key = "my-23-reset-2027-v1";
-const fresh = () => ({days:{},paid:{},mastered:{},starting:6000,checking:0});
+const birthdaySavingsGoals = {emergency:10000,travel:2000,checking:1000};
+const birthdayStartingBalances = {emergency:3000,travel:523.52,checking:12.47};
+const fresh = () => ({days:{},paid:{},mastered:{},starting:6000,...birthdayStartingBalances});
 let state = fresh();
 let storageWarning = "";
-try { const saved = localStorage.getItem(key); if(saved) state = {...state,...JSON.parse(saved)}; }
+function ensureFinances() {
+ for(const [name,amount] of Object.entries(birthdayStartingBalances))
+  if(!Number.isFinite(state[name])||state[name]<0)state[name]=amount;
+}
+try {
+ const saved = localStorage.getItem(key);
+ if(saved) {
+  const prior=JSON.parse(saved);
+  state={...state,...prior};
+  // First upgrade of the old two-account tracker: initialize all three from the screenshot.
+  // Keep daily, debt, Quran, and payday entries unchanged.
+  if(!Object.prototype.hasOwnProperty.call(prior,"emergency"))Object.assign(state,birthdayStartingBalances);
+ }
+ ensureFinances();
+}
 catch { storageWarning = "Browser storage is unavailable. Export a backup to keep your entries."; }
 
 // Debt tracker: keep the original storage key so existing Daily/Growth progress is preserved.
@@ -382,12 +415,21 @@ function render(){
  $("health").elements.weight.value=current.weight??"";
  $("weightSummary").textContent=latest?"Latest: "+weight+" lb · "+fmt(latest):"Log your weight to update this goal.";
  const paid=count(paydays,d=>!!state.paid[d]);
- const savings=state.starting+paid*500;
- const financeRatio=(limit(savings/10000)+limit(state.checking/1000))/2;
- $("savedBalance").textContent=money(savings);$("checkingBalance").textContent=money(state.checking);
- $("paySummary").textContent=paid+" of 14 transfers logged · $500 each · "+money(paid*500)+" added";
- $("finance").elements.starting.value=state.starting;$("finance").elements.checking.value=state.checking;
- const payRow=d=>check("Log $500 · "+fmt(d),state.paid[d],value=>{state.paid[d]=value;store();});
+ const savingsAccountNames=Object.keys(birthdaySavingsGoals);
+ const savingsTotal=savingsAccountNames.reduce((sum,name)=>sum+state[name],0);
+ const savingsRemaining=savingsAccountNames.reduce((sum,name)=>sum+Math.max(0,birthdaySavingsGoals[name]-state[name]),0);
+ const savingsProgress=savingsAccountNames.reduce((sum,name)=>sum+Math.min(state[name],birthdaySavingsGoals[name]),0);
+ const financeRatio=limit(savingsProgress/13000);
+ $("savingsTotal").textContent=money(savingsTotal);
+ $("savingsRemaining").textContent=money(savingsRemaining)+" to go";
+ for(const name of savingsAccountNames){
+  $(name+"Balance").textContent=money(state[name]);
+  $(name+"Bar").value=Math.min(state[name],birthdaySavingsGoals[name]);
+  $(name+"Remaining").textContent=money(Math.max(0,birthdaySavingsGoals[name]-state[name]))+" to go";
+  $("finance").elements[name].value=state[name];
+ }
+ $("paySummary").textContent=paid+" of 14 paydays logged · Update account balances after deposits.";
+ const payRow=d=>check("Payday deposit · "+fmt(d),state.paid[d],value=>{state.paid[d]=value;store();});
  $("payCheck").replaceChildren(...(paydays.includes(date)?[payRow(date)]:[]));
  $("paydays").replaceChildren(...paydays.map(payRow));
  $("exempt").checked=!!current.exempt;
@@ -434,7 +476,7 @@ function render(){
  const debtRatio=debtTotals().ratio;
  const scores=[weightRatio,financeRatio,quranRatio,debtRatio];
  bar("weightProgress","Weight loss toward goal",weightRatio);
- bar("financeProgress","Finances",financeRatio);
+ bar("financeProgress","Birthday savings · $13,000 goal",financeRatio);
  renderDebts();
  bar("quranProgress","Quran memorization",learned/portionTotal);
  bar("masteryProgress","Surahs passed in recitation",mastered/surahs.length);
@@ -466,7 +508,9 @@ $("health").onsubmit=event=>{
 $("finance").onsubmit=event=>{
  event.preventDefault();
  const values=event.currentTarget.elements;
- state.starting=Number(values.starting.value);state.checking=Number(values.checking.value);
+ state.emergency=Number(values.emergency.value);
+ state.travel=Number(values.travel.value);
+ state.checking=Number(values.checking.value);
  store("Balances saved.");
 };
 $("export").onclick=()=>{
@@ -480,8 +524,12 @@ $("backup").onchange=async event=>{
  if(!file)return;
  try{
   const data=JSON.parse(await file.text());
-  if(!data||!Number.isFinite(data.starting)||!Number.isFinite(data.checking)||!data.days||!data.paid||!data.mastered)throw Error();
-  if(window.confirm("Replace this browser’s entries with the backup?")){state=data;ensureDebts();store("Backup restored.");}
+  if(!data||!Number.isFinite(data.checking)||!data.days||!data.paid||!data.mastered)throw Error();
+  if(window.confirm("Replace this browser’s entries with the backup?")){
+   state=data;
+   if(!Number.isFinite(state.emergency))Object.assign(state,birthdayStartingBalances);
+   ensureFinances();ensureDebts();store("Backup restored.");
+  }
  }catch{$("status").textContent="That file could not be restored. Choose a My 23 Reset backup.";}
  event.target.value="";
 };
